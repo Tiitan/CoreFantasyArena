@@ -66,7 +66,7 @@ function ChangeTarget(newTarget)
 		Events.BroadcastToServer("OnTargetChanged", newTarget)
 	else
 		local npc = newTarget and newTarget:GetCustomProperty("Targetable"):WaitForObject()
-		print("TargetSelector:ChangeTarget " .. tostring(npc))
+		--print("TargetSelector:ChangeTarget " .. tostring(npc))
 		Events.Broadcast("OnTargetChanged", npc)
 		Events.BroadcastToServer("OnTargetChanged", npc and npc:GetReference())
 	end

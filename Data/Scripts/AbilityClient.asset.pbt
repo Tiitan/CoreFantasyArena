@@ -3,6 +3,14 @@ Assets {
   Name: "AbilityClient"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+      Overrides {
+        Name: "cs:SkillBarClient"
+        ObjectReference {
+          SelfId: 15470803866885624899
+        }
+      }
+    }
   }
   SerializationVersion: 85
 }

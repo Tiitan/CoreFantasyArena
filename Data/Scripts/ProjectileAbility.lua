@@ -57,4 +57,3 @@ parentAbility.executeEvent:Connect(OnExecute)
 Task.Wait()
 characterManager = parentEquipment:GetCustomProperty("AttachedManager"):GetObject()
 characterManager = characterManager and characterManager.context
-

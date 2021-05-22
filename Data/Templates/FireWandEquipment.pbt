@@ -76,6 +76,25 @@ Assets {
             Name: "cs:EnergyCost"
             Float: 15
           }
+          Overrides {
+            Name: "cs:Icon"
+            AssetReference {
+              Id: 3268943269819640373
+            }
+          }
+          Overrides {
+            Name: "cs:IconTint"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "cs:SkillSlot"
+            Int: 1
+          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -581,6 +600,15 @@ Assets {
       }
     }
     Assets {
+      Id: 3268943269819640373
+      Name: "Fantasy Ability Red 007"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Ability_Red_007"
+      }
+    }
+    Assets {
       Id: 1920010878601219178
       Name: "Fantasy Sword Guard 01"
       PlatformAssetType: 1
@@ -630,5 +658,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 85
 }

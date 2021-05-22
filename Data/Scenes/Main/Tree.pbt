@@ -5026,7 +5026,8 @@ Objects {
     }
   }
   ParentId: 4898575731042166209
-  ChildIds: 8604041072821229650
+  ChildIds: 15470803866885624899
+  ChildIds: 4144822402268661071
   ChildIds: 4796394397740998552
   ChildIds: 6349705364559155605
   ChildIds: 4200279113299020410
@@ -5079,16 +5080,7 @@ Objects {
       }
     }
     ParameterOverrideMap {
-      key: 5545056981863284185
-      value {
-        Overrides {
-          Name: "UIX"
-          Float: 360
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 10756510191543038619
+      key: 10746965902838900407
       value {
         Overrides {
           Name: "Name"
@@ -5105,12 +5097,12 @@ Objects {
           }
         }
         Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
+          Name: "UIX"
+          Float: 385
+        }
+        Overrides {
+          Name: "cs:SlotId"
+          Int: 8
         }
       }
     }
@@ -5151,16 +5143,12 @@ Objects {
       }
     }
     ParameterOverrideMap {
-      key: 5545056981863284185
+      key: 650816508736749760
       value {
-        Overrides {
-          Name: "UIX"
-          Float: 260
-        }
       }
     }
     ParameterOverrideMap {
-      key: 10756510191543038619
+      key: 10746965902838900407
       value {
         Overrides {
           Name: "Name"
@@ -5177,12 +5165,12 @@ Objects {
           }
         }
         Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
+          Name: "UIX"
+          Float: 280
+        }
+        Overrides {
+          Name: "cs:SlotId"
+          Int: 7
         }
       }
     }
@@ -5223,16 +5211,7 @@ Objects {
       }
     }
     ParameterOverrideMap {
-      key: 5545056981863284185
-      value {
-        Overrides {
-          Name: "UIX"
-          Float: 160
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 10756510191543038619
+      key: 10746965902838900407
       value {
         Overrides {
           Name: "Name"
@@ -5249,12 +5228,12 @@ Objects {
           }
         }
         Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
+          Name: "cs:SlotId"
+          Int: 6
+        }
+        Overrides {
+          Name: "UIX"
+          Float: 175
         }
       }
     }
@@ -5295,16 +5274,7 @@ Objects {
       }
     }
     ParameterOverrideMap {
-      key: 5545056981863284185
-      value {
-        Overrides {
-          Name: "UIX"
-          Float: 50
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 10756510191543038619
+      key: 10746965902838900407
       value {
         Overrides {
           Name: "Name"
@@ -5321,12 +5291,12 @@ Objects {
           }
         }
         Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
+          Name: "UIX"
+          Float: 65
+        }
+        Overrides {
+          Name: "cs:SlotId"
+          Int: 5
         }
       }
     }
@@ -5365,34 +5335,21 @@ Objects {
           String: "RMB"
         }
         Overrides {
-          Name: "UIX"
-          Float: 0
+          Name: "Width"
+          Int: 40
         }
         Overrides {
           Name: "UIY"
           Float: 0
         }
         Overrides {
-          Name: "Width"
-          Int: 35
-        }
-        Overrides {
-          Name: "Height"
-          Int: 30
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 5545056981863284185
-      value {
-        Overrides {
           Name: "UIX"
-          Float: -50
+          Float: -2
         }
       }
     }
     ParameterOverrideMap {
-      key: 10756510191543038619
+      key: 10746965902838900407
       value {
         Overrides {
           Name: "Name"
@@ -5409,12 +5366,12 @@ Objects {
           }
         }
         Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
+          Name: "cs:SlotId"
+          Int: 4
+        }
+        Overrides {
+          Name: "UIX"
+          Float: -40
         }
       }
     }
@@ -5455,16 +5412,7 @@ Objects {
       }
     }
     ParameterOverrideMap {
-      key: 5545056981863284185
-      value {
-        Overrides {
-          Name: "UIX"
-          Float: -160
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 10756510191543038619
+      key: 10746965902838900407
       value {
         Overrides {
           Name: "Name"
@@ -5481,12 +5429,12 @@ Objects {
           }
         }
         Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
+          Name: "UIX"
+          Float: -150
+        }
+        Overrides {
+          Name: "cs:SlotId"
+          Int: 3
         }
       }
     }
@@ -5527,16 +5475,7 @@ Objects {
       }
     }
     ParameterOverrideMap {
-      key: 5545056981863284185
-      value {
-        Overrides {
-          Name: "UIX"
-          Float: -260
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 10756510191543038619
+      key: 10746965902838900407
       value {
         Overrides {
           Name: "Name"
@@ -5553,12 +5492,12 @@ Objects {
           }
         }
         Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
+          Name: "cs:SlotId"
+          Int: 2
+        }
+        Overrides {
+          Name: "UIX"
+          Float: -255
         }
       }
     }
@@ -5568,7 +5507,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8604041072821229650
+  Id: 4144822402268661071
   Name: "SkillSlot"
   Transform {
     Scale {
@@ -5586,41 +5525,7 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 569813346308820675
-      value {
-        Overrides {
-          Name: "Label"
-          String: "LMB"
-        }
-        Overrides {
-          Name: "UIX"
-          Float: 0
-        }
-        Overrides {
-          Name: "UIY"
-          Float: 0
-        }
-        Overrides {
-          Name: "Width"
-          Int: 35
-        }
-        Overrides {
-          Name: "Height"
-          Int: 30
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 5545056981863284185
-      value {
-        Overrides {
-          Name: "UIX"
-          Float: -360
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 10756510191543038619
+      key: 10746965902838900407
       value {
         Overrides {
           Name: "Name"
@@ -5629,17 +5534,54 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
+            X: 6500
+            Y: -21650
+            Z: 7950
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
+            Yaw: 135
           }
         }
       }
     }
     TemplateAsset {
       Id: 5790139119287675123
+    }
+  }
+}
+Objects {
+  Id: 15470803866885624899
+  Name: "SkillBarClient"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2725782389603404967
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 1626616367826750425
     }
   }
 }
