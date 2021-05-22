@@ -2,7 +2,7 @@ Assets {
   Id: 6047168645193620126
   Name: "arenaRoof"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 85
   CustomMaterialAsset {
     BaseMaterialId: 9231008922041681424
     ParameterOverrides {

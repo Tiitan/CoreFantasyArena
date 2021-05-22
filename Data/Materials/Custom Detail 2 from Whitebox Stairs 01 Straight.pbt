@@ -2,7 +2,7 @@ Assets {
   Id: 13310554214047411953
   Name: "arenaWood"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 85
   CustomMaterialAsset {
     BaseMaterialId: 12381050650684225153
     ParameterOverrides {

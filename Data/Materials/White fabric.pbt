@@ -2,7 +2,7 @@ Assets {
   Id: 12978027183466891518
   Name: "White fabric"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 85
   CustomMaterialAsset {
     BaseMaterialId: 4283882605584835114
     ParameterOverrides {

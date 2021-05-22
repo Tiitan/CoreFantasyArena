@@ -2,7 +2,7 @@ Assets {
   Id: 4163602889644584143
   Name: "Black steel"
   PlatformAssetType: 13
-  SerializationVersion: 84
+  SerializationVersion: 85
   CustomMaterialAsset {
     BaseMaterialId: 4283882605584835114
     ParameterOverrides {

@@ -644,5 +644,5 @@ Assets {
       AssetId: "Fantasy_Castle_Wall_01_-_Door_Basic_Template"
     }
   }
-  SerializationVersion: 84
+  SerializationVersion: 85
 }
