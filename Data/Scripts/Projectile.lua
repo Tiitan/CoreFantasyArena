@@ -12,7 +12,12 @@ local impactTask = nil
 -- register it to network for client fx
 -- start impact task
 function Init(target)
-	script:SetNetworkedCustomProperty("Target", target:GetReference())
+	if target:IsPlayer() then
+		script:SetNetworkedCustomProperty("TargetPlayer", target:GetId())
+	else
+		script:SetNetworkedCustomProperty("Target", target:GetReference())
+	end
+
 	local distance = (target:GetWorldPosition() - startPosition).size
 	impactDelay = distance / velocity
 	arrivalTime = initialTime + impactDelay

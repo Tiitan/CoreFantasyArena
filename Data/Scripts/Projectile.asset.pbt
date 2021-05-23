@@ -14,6 +14,10 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:TargetPlayer"
+        String: ""
+      }
+      Overrides {
         Name: "cs:ArrivalTime"
         Float: 0
       }
@@ -36,6 +40,10 @@ Assets {
       Overrides {
         Name: "cs:velocity:tooltip"
         String: "projectile velocity: cm/s, used to calculate arrival time at spawn."
+      }
+      Overrides {
+        Name: "cs:TargetPlayer:isrep"
+        Bool: true
       }
     }
   }
