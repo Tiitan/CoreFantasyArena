@@ -33,6 +33,10 @@ Assets {
           Id: 841534158063459245
         }
       }
+      Overrides {
+        Name: "cs:StorageId"
+        Int: 0
+      }
     }
   }
   SerializationVersion: 85

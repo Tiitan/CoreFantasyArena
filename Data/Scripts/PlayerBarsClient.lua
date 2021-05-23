@@ -36,7 +36,7 @@ function Tick()
 	end
 end
 
-print("playerbars " .. player.name .. " " .. player.id)
+--print("playerbars " .. player.name .. " " .. player.id)
 Events.Connect(player.id .. "OnDamageOverTimeUpdate", OnDamageOverTimeUpdate)
 Events.Connect(player.id .. "OnEnergyOverTimeUpdate", OnEnergyOverTimeUpdate)
 Events.Connect(player.id .. "OnEnergyUpdate", OnEnergyUpdate)

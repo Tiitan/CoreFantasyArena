@@ -29,6 +29,7 @@ Objects {
   ChildIds: 6969831810575215387
   ChildIds: 12614012709893875839
   ChildIds: 14604374636140847471
+  ChildIds: 3207489578211324975
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -41,6 +42,39 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 3207489578211324975
+  Name: "FireWandEquipment"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 10934123037201466869
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FireWandEquipment"
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 12895800656816040920
+    }
   }
 }
 Objects {
@@ -89,12 +123,6 @@ Objects {
   ParentId: 14604374636140847471
   ChildIds: 13817807705951525370
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:FireWand"
-      AssetReference {
-        Id: 12895800656816040920
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -113,7 +141,7 @@ Objects {
 }
 Objects {
   Id: 13817807705951525370
-  Name: "EquipmentData"
+  Name: "FireWand"
   Transform {
     Location {
       Z: 75
@@ -181,6 +209,7 @@ Objects {
   ParentId: 4781671109827199097
   ChildIds: 7421489227270311357
   ChildIds: 758258983435949859
+  ChildIds: 16847657793792504537
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -192,6 +221,39 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+}
+Objects {
+  Id: 16847657793792504537
+  Name: "StorageManager"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12614012709893875839
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 17179922111804682585
+    }
   }
 }
 Objects {

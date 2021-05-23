@@ -80,6 +80,19 @@ Assets {
   }
 }
 Assets {
+  Id: 11263965893868090613
+  Name: "ReminiscenceOfAscalon"
+  PlatformAssetType: 23
+  NetReferenceAsset {
+    NetReference {
+      Key: "9e762fd68eff47158509c6e71eaa1c12"
+      Type {
+        Value: "mc:enetreferencetype:sharedpersistence"
+      }
+    }
+  }
+}
+Assets {
   Id: 8473773034718390853
   Name: "Fantasy Staff 021"
   PlatformAssetType: 9

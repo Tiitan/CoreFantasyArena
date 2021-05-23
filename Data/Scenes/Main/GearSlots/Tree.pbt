@@ -61,7 +61,7 @@ Objects {
         }
         Overrides {
           Name: "cs:Slot"
-          String: "MainHand2"
+          String: "MainHand1"
         }
         Overrides {
           Name: "cs:ItemSlot"
@@ -468,6 +468,10 @@ Objects {
             Y: 1
             Z: 1
           }
+        }
+        Overrides {
+          Name: "cs:Slot"
+          String: "Belt"
         }
       }
     }

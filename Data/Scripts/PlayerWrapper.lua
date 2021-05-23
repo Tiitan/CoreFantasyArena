@@ -43,6 +43,10 @@ function class:GetReference()
 	return self.player
 end
 
+function class:IsPlayer()
+	return true
+end
+
 -- nil Equip(equipment)
 -- Server only
 function class:Equip(equipment)

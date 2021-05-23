@@ -6,12 +6,10 @@ Server and Client
 -- init equipmentDatas:
 -- get all library's coreobject then fetch the script context
 local equipmentDatas = {}
-local equipmentDataObjects = script:GetChildren()
-for _, equipmentDataObject in pairs(equipmentDataObjects) do
-	equipmentDatas[equipmentDataObject.id] = equipmentDataObject.context
-end
+local storageIdMap = {}
 
 -- table GetEquipments(string)
+-- Used by client GearPanel
 -- return: all equipment for a slot as a list of EquipmentData
 function GetEquipments(slot)
 	--allEquipmentData = allEquipmentData or script:GetChildren()
@@ -24,9 +22,29 @@ function GetEquipments(slot)
 	return list
 end
 
--- Script GetEquipment(string)
--- find an equipment from his id
+-- EquipmentData.context GetEquipment(string)
+-- find an equipment from his MUID
 -- used for communication between server and client
-function GetEquipment(id)
-	return equipmentDatas[id]
+function GetEquipment(muid)
+	return equipmentDatas[muid]
+end
+
+-- EquipmentData.context GetEquipmentByStorageId(int)
+-- used for persistant storage deserialization
+function GetEquipmentByStorageId(storageId)
+	local muid = storageIdMap[storageId]
+	return equipmentDatas[muid]
+end
+
+local equipmentDataObjects = script:GetChildren()
+for _, equipmentDataObject in pairs(equipmentDataObjects) do
+	equipmentDatas[equipmentDataObject.id] = equipmentDataObject.context
+	
+	-- storageId mapping
+	local storageId = equipmentDataObject:GetCustomProperty("StorageId") -- context not initialized
+	if storageIdMap[storageId] then
+		local prevEquipment = GetEquipmentByStorageId(storageId)
+		warn("Duplicated storageId: " .. prevEquipment.GetDisplayName() .. " and " .. equipmentDataObject.context.GetDisplayName())
+	end
+	storageIdMap[storageId] = equipmentDataObject.id
 end

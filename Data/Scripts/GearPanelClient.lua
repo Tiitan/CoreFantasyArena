@@ -1,3 +1,9 @@
+--[[
+GearPanelClient
+script attached to the character equipment panel.
+broadcast equipment changes event, listened by PlayersListener.
+--]]
+
 local gearSelectorPanel = script:GetCustomProperty("GearSelectorPanel"):WaitForObject()
 local equipmentLibrary = script:GetCustomProperty("EquipmentLibrary"):WaitForObject().context
 local gearSelectorUi = script:GetCustomProperty("GearSelectorUi"):WaitForObject()
@@ -14,6 +20,7 @@ local pressedSelectedColor = gearSlotButtons[1]:GetCustomProperty("PressedSelect
 
 local localPlayer = Game.GetLocalPlayer()
 local currentSelectedGearSlotButton = nil
+local slotToButton = {} -- hash of (str slotId -> CoreObject gearSlotButton)
 
 -- nil UnloadGearSelectorPanel()
 -- delete all gearSelectorUiItemTemplate, (child of gearSelectorUi)
@@ -25,7 +32,7 @@ function UnloadGearSelectorPanel()
 	end
 end
 
--- nil InitGearSelectorUiItem(coreobject, table)
+-- nil InitGearSelectorUiItem(coreobject, EquipmentData.context, int)
 -- called from LoadGearSelectorPanel for each equipment
 -- param gearSelectorUiItem: instance of gearSelectorUiItemTemplate
 -- param equipmentData: context of equipmentData script
@@ -60,18 +67,34 @@ end
 -- nil OnGearSelected(UiButton)
 -- Called when an item was clicked in selection panel
 -- change gear selection and close selector
+-- BroadcastToServer ChangeEquipment listened by PlayersListener
 function OnGearSelected(gearSelectorUiItem)
-	local imageUi = currentSelectedGearSlotButton:GetCustomProperty("Icon"):WaitForObject()
 	equipmentData = gearSelectorUiItem.clientUserData.equipmentData
-
-	imageUi:SetImage(equipmentData and equipmentData.GetIcon())
-	imageUi.visibility = equipmentData and Visibility.INHERIT or Visibility.FORCE_OFF
-	
 	local slot = currentSelectedGearSlotButton:GetCustomProperty("Slot")
+	
 	Events.BroadcastToServer("ChangeEquipment", equipmentData and equipmentData.script.id, slot)
 	
 	-- close selector panel
 	OnGearSlotSelectionChanged(nil)
+end
+
+-- nil EquipmentChanged(MUID, str)
+-- equipmentDataId: muid of an exisintg EquipmentData in the equipment library
+-- slot: string identifier (ex: MainHand1)
+-- Event from Server (CharacterManager) when an item is equiped. Needed for confirmation and on connection.
+function EquipmentChanged(equipmentDataId, slot)
+	local equipmentData = equipmentLibrary.GetEquipment(equipmentDataId)
+	local gearSlotButton = slotToButton[slot]
+	UpdateButtonVisuals(gearSlotButton, equipmentData)
+end
+
+-- nil UpdateButtonVisuals(CoreObject, EquipmentData.context)
+function UpdateButtonVisuals(gearSlotButton, equipmentData)
+	local imageUi = gearSlotButton:GetCustomProperty("Icon"):WaitForObject()
+
+
+	imageUi:SetImage(equipmentData and equipmentData.GetIcon())
+	imageUi.visibility = equipmentData and Visibility.INHERIT or Visibility.FORCE_OFF
 end
 
 -- nil OnGearSlotButtonClicked(UiButton)
@@ -122,7 +145,10 @@ end
 
 for _, gearSlotButton in pairs(gearSlotButtons) do
 	gearSlotButton.clickedEvent:Connect(OnGearSlotSelectionChanged)
+	slotToButton[gearSlotButton:GetCustomProperty("Slot")] = gearSlotButton
 end
 
 localPlayer.bindingPressedEvent:Connect(OnBindingPressed)
 script.parent.visibility = Visibility.FORCE_OFF
+
+Events.Connect("EquipmentChanged", EquipmentChanged)

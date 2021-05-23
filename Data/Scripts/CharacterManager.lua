@@ -213,7 +213,7 @@ function ApplyEot()
 	end
 end
 
--- nil  ChangeEquipment(CoreObject, string)
+-- nil  ChangeEquipment(EquipmentData.context, string)
 -- called by PlayersListener when receiving client request (from Ui)
 -- dettach and destroy previous equipment, spawn and attach new
 function ChangeEquipment(equipmentData, slot)
@@ -227,7 +227,12 @@ function ChangeEquipment(equipmentData, slot)
 		attached_equipments[slot] = World.SpawnAsset(equipmentData.GetEquipmentTemplate())
 		attached_equipments[slot]:SetNetworkedCustomProperty("AttachedManager", script)
 		-- TODO weapon switch indirection
-		character:Equip(attached_equipments[slot])
+		character:Equip(attached_equipments[slot])		
+	end
+	
+	if character:IsPlayer() then
+		local equipmentId = equipmentData and equipmentData.script.id
+		Events.BroadcastToPlayer(character:GetReference(), "EquipmentChanged", equipmentId, slot)
 	end
 end
 

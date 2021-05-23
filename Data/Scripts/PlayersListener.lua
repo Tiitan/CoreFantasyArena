@@ -4,11 +4,13 @@ listen to player events, validate and broadcast to CharacterManager
 --]]
 
 local equipmentLibrary = script:GetCustomProperty("EquipmentLibrary"):WaitForObject().context
+local storageManager = script:GetCustomProperty("StorageManager"):WaitForObject().context
 
 function ChangeEquipment(player, equipmentDataId, slot)
 	--TODO disable during match
 	local equipmentData = equipmentLibrary.GetEquipment(equipmentDataId)
 	player.serverUserData.Manager.ChangeEquipment(equipmentData, slot)
+	storageManager.ChangeEquipment(player, equipmentData, slot)
 end
 
 -- nil OnTargetChanged(player, coreobject or player)

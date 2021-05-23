@@ -35,3 +35,10 @@ function GetEquipmentTemplate()
 	equipmentTemplate = equipmentTemplate or script:GetCustomProperty("EquipmentTemplate")
 	return equipmentTemplate
 end
+
+-- int GetStorageId()
+-- persistant storage uses integer instead of MUID for efficiency
+function GetStorageId()
+	equipmentId = equipmentId or script:GetCustomProperty("StorageId")
+	return equipmentId
+end

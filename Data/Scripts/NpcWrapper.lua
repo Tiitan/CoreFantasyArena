@@ -39,6 +39,10 @@ function class:GetReference()
 	return self.npc:GetReference()
 end
 
+function class:IsPlayer()
+	return false
+end
+
 -- nil ApplyDamage(damege)
 -- Server only
 function class:ApplyDamage(damage)
