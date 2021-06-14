@@ -29,7 +29,6 @@ Objects {
   ChildIds: 6969831810575215387
   ChildIds: 12614012709893875839
   ChildIds: 14604374636140847471
-  ChildIds: 9255669914250506988
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -42,48 +41,6 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
-  }
-}
-Objects {
-  Id: 9255669914250506988
-  Name: "TestProjectile"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 1795022851046753589
-      value {
-        Overrides {
-          Name: "Name"
-          String: "TestProjectile"
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 10899860047903975463
-      value {
-        Overrides {
-          Name: "cs:damage"
-          Float: 50
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 4756532549502284940
-    }
   }
 }
 Objects {

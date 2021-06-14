@@ -1,3 +1,13 @@
+--[[
+Projectile
+server projectile class
+spawned by projectile ability.
+calculate travel time
+apply impact effect
+--]]
+
+
+local damage = script:GetCustomProperty("damage")
 local velocity = script:GetCustomProperty("velocity")
 local root = script.parent
 
@@ -7,11 +17,14 @@ local arrivalTime = -1
 
 local impactTask = nil
 
+local target = nil
+
 -- nil Init(NpcWrapper or PlayerWrapper)
 -- compute an unavoidable projectile's target and arrival time at initialisation
 -- register it to network for client fx
 -- start impact task
-function Init(target)
+function Init(newTarget)
+	target = newTarget
 	if target:IsPlayer() then
 		script:SetNetworkedCustomProperty("TargetPlayer", target:GetId())
 	else
@@ -29,6 +42,9 @@ end
 -- Travel is only computed client side in ProjectileClient
 -- called when the projectile reach the target
 function Impact()
+	if damage and target then
+		target:ApplyDamage(Damage.New(damage))
+	end
 	print("projectile reach target")
 	root:Destroy()
 end

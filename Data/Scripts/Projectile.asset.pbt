@@ -9,6 +9,10 @@ Assets {
         Float: 0
       }
       Overrides {
+        Name: "cs:damage"
+        Float: 0
+      }
+      Overrides {
         Name: "cs:Target"
         ObjectReference {
         }

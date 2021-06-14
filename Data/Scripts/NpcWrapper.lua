@@ -43,10 +43,25 @@ function class:IsPlayer()
 	return false
 end
 
+function class:IsDead()
+	if not Object.IsValid(self.npc) then return true end -- Npc Destroyed
+	
+	if self.npc.context then
+		return self.npc.context.IsDead() -- server
+	end
+	return self.npc:GetCustomProperty("HitPoints") <= 0 -- client (no context)
+end
+
 -- nil ApplyDamage(damege)
 -- Server only
 function class:ApplyDamage(damage)
 	self.npc.context.ApplyDamage(damage)
+end
+
+-- nil Die()
+-- Server only
+function class:Die()
+	self.npc.context.Die()
 end
 
 -- nil Equip(equipment)

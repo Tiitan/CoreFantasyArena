@@ -52,6 +52,10 @@ Assets {
             Name: "cs:velocity"
             Float: 2000
           }
+          Overrides {
+            Name: "cs:damage"
+            Float: 20
+          }
         }
         WantsNetworking: true
         Collidable_v2 {

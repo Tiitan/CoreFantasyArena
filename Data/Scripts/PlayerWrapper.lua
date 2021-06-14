@@ -47,10 +47,20 @@ function class:IsPlayer()
 	return true
 end
 
+function class:IsDead()
+	return self.player.isDead
+end
+
 -- nil Equip(equipment)
 -- Server only
 function class:Equip(equipment)
 	equipment:Equip(self.player)
+end
+
+-- nil Die()
+-- Server only
+function class:Die()
+	self.player.Die()
 end
 
 -- nil Unequip(equipment)
