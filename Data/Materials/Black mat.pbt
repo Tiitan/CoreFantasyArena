@@ -2,7 +2,7 @@ Assets {
   Id: 13402204903699073167
   Name: "Black mat"
   PlatformAssetType: 13
-  SerializationVersion: 85
+  SerializationVersion: 87
   CustomMaterialAsset {
     BaseMaterialId: 4283882605584835114
     ParameterOverrides {

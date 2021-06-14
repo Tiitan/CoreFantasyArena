@@ -162,7 +162,7 @@ Objects {
         Overrides {
           Name: "VerticalJustification"
           Enum {
-            Value: "mc:everticaljustification:baseline"
+            Value: "mc:everticaljustification:center"
           }
         }
         Overrides {
@@ -172,6 +172,10 @@ Objects {
         Overrides {
           Name: "Label"
           String: "Target"
+        }
+        Overrides {
+          Name: "UIX"
+          Float: 0
         }
       }
     }

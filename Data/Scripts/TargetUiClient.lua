@@ -37,7 +37,7 @@ function OnTargetLockChanged(isLocked)
 end
 
 function Tick()
-	if currentTarget then
+	if currentTarget and not currentTarget:IsDead() then	
 		-- Update target image visual size and position to be above the 3D target position
 		local targetPosition = currentTarget:GetWorldPosition()	
 		local targetScreenPosition = UI.GetScreenPosition(targetPosition)

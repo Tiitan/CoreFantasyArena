@@ -43,5 +43,5 @@ Assets {
     Version: "1.0.0"
     Description: "Empty castle with 4 entrance. It\'s just the outer shell of the castle. You can fill it however you like."
   }
-  SerializationVersion: 85
+  SerializationVersion: 87
 }

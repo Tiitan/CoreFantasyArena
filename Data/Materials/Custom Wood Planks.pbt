@@ -2,7 +2,7 @@ Assets {
   Id: 2510629812743611035
   Name: "FortificationPlatform"
   PlatformAssetType: 13
-  SerializationVersion: 85
+  SerializationVersion: 87
   CustomMaterialAsset {
     BaseMaterialId: 12381050650684225153
     ParameterOverrides {

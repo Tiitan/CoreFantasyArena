@@ -2,7 +2,7 @@ Assets {
   Id: 13145796148185726258
   Name: "FortificationWall"
   PlatformAssetType: 13
-  SerializationVersion: 85
+  SerializationVersion: 87
   CustomMaterialAsset {
     BaseMaterialId: 10920499371254489296
     ParameterOverrides {

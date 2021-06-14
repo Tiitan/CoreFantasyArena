@@ -2,7 +2,7 @@ Assets {
   Id: 13229285193203540899
   Name: "ArenaWalls"
   PlatformAssetType: 13
-  SerializationVersion: 85
+  SerializationVersion: 87
   CustomMaterialAsset {
     BaseMaterialId: 9406149688478606724
     ParameterOverrides {

@@ -29,7 +29,7 @@ Objects {
   ChildIds: 6969831810575215387
   ChildIds: 12614012709893875839
   ChildIds: 14604374636140847471
-  ChildIds: 3207489578211324975
+  ChildIds: 9255669914250506988
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -45,8 +45,8 @@ Objects {
   }
 }
 Objects {
-  Id: 3207489578211324975
-  Name: "FireWandEquipment"
+  Id: 9255669914250506988
+  Name: "TestProjectile"
   Transform {
     Scale {
       X: 1
@@ -64,16 +64,25 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 10934123037201466869
+      key: 1795022851046753589
       value {
         Overrides {
           Name: "Name"
-          String: "FireWandEquipment"
+          String: "TestProjectile"
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 10899860047903975463
+      value {
+        Overrides {
+          Name: "cs:damage"
+          Float: 50
         }
       }
     }
     TemplateAsset {
-      Id: 12895800656816040920
+      Id: 4756532549502284940
     }
   }
 }
@@ -3904,6 +3913,7 @@ Objects {
       ContentType {
         Value: "mc:ecanvascontenttype:dynamic"
       }
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -4026,6 +4036,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -4237,6 +4248,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {
@@ -4540,6 +4552,7 @@ Objects {
       }
     }
     Panel {
+      Opacity: 1
     }
     AnchorLayout {
       SelfAnchor {

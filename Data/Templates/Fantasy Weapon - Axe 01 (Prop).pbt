@@ -335,5 +335,5 @@ Assets {
       AssetId: "Fantasy_Weapon_-_Axe_01__Prop_"
     }
   }
-  SerializationVersion: 85
+  SerializationVersion: 87
 }
