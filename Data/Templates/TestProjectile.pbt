@@ -54,7 +54,7 @@ Assets {
           }
           Overrides {
             Name: "cs:damage"
-            Float: 20
+            Float: 50
           }
         }
         WantsNetworking: true
